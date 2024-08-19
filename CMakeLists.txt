@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.28)
+project(CppDemo CXX)
+set(CMAKE_CXX_STANDARD 17)
+
+set(DEMO "demo")
+add_executable(${DEMO} "src/main.cpp")
+target_include_directories(${DEMO} PRIVATE "./include/")
+target_compile_options(${DEMO} PRIVATE)
+target_compile_options(${DEMO} PRIVATE "$<$<CONFIG:Debug>:-O0>")
+target_link_libraries(${DEMO} PRIVATE)
+target_link_options(${DEMO} PRIVATE)
